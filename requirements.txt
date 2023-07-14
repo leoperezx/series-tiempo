@@ -1,0 +1,7 @@
+pip
+numpy
+folium
+pandas
+os
+random
+webbrowser

@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fe946a0c2c1e5ae606fb2abc3590c643 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fe946a0c2c1e5ae606fb2abc3590c643" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fe946a0c2c1e5ae606fb2abc3590c643 = L.map(
+                "map_fe946a0c2c1e5ae606fb2abc3590c643",
+                {
+                    center: [3.535513, -76.297656],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e84f997c177a78a21e513031d453e48e = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var marker_809b97639bc398af4684a82ae0c27e5d = L.marker(
+                [3.54599, -76.29602],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_2e440c58b6e04b7d478194474c82b277 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_809b97639bc398af4684a82ae0c27e5d.setIcon(icon_2e440c58b6e04b7d478194474c82b277);
+        
+    
+        var popup_e169dc8b66206b9adc2bd316d92abb93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f605e10afe9f817a03f2205f86cf7eb = $(`<div id="html_4f605e10afe9f817a03f2205f86cf7eb" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:CONDUCIR EN ZIGZA</p></div>`)[0];
+                popup_e169dc8b66206b9adc2bd316d92abb93.setContent(html_4f605e10afe9f817a03f2205f86cf7eb);
+            
+        
+
+        marker_809b97639bc398af4684a82ae0c27e5d.bindPopup(popup_e169dc8b66206b9adc2bd316d92abb93)
+        ;
+
+        
+    
+    
+            marker_809b97639bc398af4684a82ae0c27e5d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52f83b4c9e47dccde2192ced4068b55a = L.marker(
+                [3.5385, -76.30224],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_726b298bed2cedebd42dcb695feb1f06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_52f83b4c9e47dccde2192ced4068b55a.setIcon(icon_726b298bed2cedebd42dcb695feb1f06);
+        
+    
+        var popup_6ba443c4847248bd39c7aca7eef02438 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d07d3a19c456f5fee4a22b57410f79d = $(`<div id="html_3d07d3a19c456f5fee4a22b57410f79d" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO RESPETAR PRELACION</p></div>`)[0];
+                popup_6ba443c4847248bd39c7aca7eef02438.setContent(html_3d07d3a19c456f5fee4a22b57410f79d);
+            
+        
+
+        marker_52f83b4c9e47dccde2192ced4068b55a.bindPopup(popup_6ba443c4847248bd39c7aca7eef02438)
+        ;
+
+        
+    
+    
+            marker_52f83b4c9e47dccde2192ced4068b55a.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dba6794030770830d267bec4ba95b280 = L.marker(
+                [3.53889, -76.3081],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_7f87cbd204fafd2862376103d047f4f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_dba6794030770830d267bec4ba95b280.setIcon(icon_7f87cbd204fafd2862376103d047f4f7);
+        
+    
+        var popup_6047bb2af5c782c16d18ef6f1fae851b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc7e59fa168f47af7c571f896b44b9fe = $(`<div id="html_cc7e59fa168f47af7c571f896b44b9fe" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:GIRAR BRUSCAMENTE</p></div>`)[0];
+                popup_6047bb2af5c782c16d18ef6f1fae851b.setContent(html_cc7e59fa168f47af7c571f896b44b9fe);
+            
+        
+
+        marker_dba6794030770830d267bec4ba95b280.bindPopup(popup_6047bb2af5c782c16d18ef6f1fae851b)
+        ;
+
+        
+    
+    
+            marker_dba6794030770830d267bec4ba95b280.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f81b782b47de8a70e056c4ce102d9f24 = L.marker(
+                [3.52054, -76.30227],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_4ca425dfa13314ad7ef385cd4e74b240 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_f81b782b47de8a70e056c4ce102d9f24.setIcon(icon_4ca425dfa13314ad7ef385cd4e74b240);
+        
+    
+        var popup_7b21b3ba36553ad27892020fd3c6d4cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71d7979c98eb42c7d6d339a7801c9a70 = $(`<div id="html_71d7979c98eb42c7d6d339a7801c9a70" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:CAMBIA CON O SIN INDICACION</p></div>`)[0];
+                popup_7b21b3ba36553ad27892020fd3c6d4cc.setContent(html_71d7979c98eb42c7d6d339a7801c9a70);
+            
+        
+
+        marker_f81b782b47de8a70e056c4ce102d9f24.bindPopup(popup_7b21b3ba36553ad27892020fd3c6d4cc)
+        ;
+
+        
+    
+    
+            marker_f81b782b47de8a70e056c4ce102d9f24.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5c509b6fa667e6c2e3f102b529a65054 = L.marker(
+                [3.53861, -76.29607],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_70dc5f58d0eaa4972a5830cd996b70e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_5c509b6fa667e6c2e3f102b529a65054.setIcon(icon_70dc5f58d0eaa4972a5830cd996b70e2);
+        
+    
+        var popup_06eb17c3d936aad7bde939e87fadc24e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2887ab9603fce8f911f0f4a018071ea3 = $(`<div id="html_2887ab9603fce8f911f0f4a018071ea3" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO RESPETAR PELACION</p></div>`)[0];
+                popup_06eb17c3d936aad7bde939e87fadc24e.setContent(html_2887ab9603fce8f911f0f4a018071ea3);
+            
+        
+
+        marker_5c509b6fa667e6c2e3f102b529a65054.bindPopup(popup_06eb17c3d936aad7bde939e87fadc24e)
+        ;
+
+        
+    
+    
+            marker_5c509b6fa667e6c2e3f102b529a65054.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_91cae36fab0f58d74f6f849d99e51238 = L.marker(
+                [3.53876, -76.31543],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_459d413b3bdc822780ce994518ca84e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_91cae36fab0f58d74f6f849d99e51238.setIcon(icon_459d413b3bdc822780ce994518ca84e7);
+        
+    
+        var popup_5c30429c8fe72e7fcf12fa292af9eb06 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99c2c778c66a4f41d8fd29a16537905d = $(`<div id="html_99c2c778c66a4f41d8fd29a16537905d" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:CRUZAR SIN OBSERVAR</p></div>`)[0];
+                popup_5c30429c8fe72e7fcf12fa292af9eb06.setContent(html_99c2c778c66a4f41d8fd29a16537905d);
+            
+        
+
+        marker_91cae36fab0f58d74f6f849d99e51238.bindPopup(popup_5c30429c8fe72e7fcf12fa292af9eb06)
+        ;
+
+        
+    
+    
+            marker_91cae36fab0f58d74f6f849d99e51238.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b1cc129e1be075bda7f788668d9cc6b = L.marker(
+                [3.51899, -76.29585],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_4cfdd0475d982f394717b77b5503c78f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_4b1cc129e1be075bda7f788668d9cc6b.setIcon(icon_4cfdd0475d982f394717b77b5503c78f);
+        
+    
+        var popup_4a5054d0ea89bc78856dd17df3816354 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7438c17dcc1f69de8211318a2212ff0a = $(`<div id="html_7438c17dcc1f69de8211318a2212ff0a" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:ARRANCAR SIN PRECAUCION</p></div>`)[0];
+                popup_4a5054d0ea89bc78856dd17df3816354.setContent(html_7438c17dcc1f69de8211318a2212ff0a);
+            
+        
+
+        marker_4b1cc129e1be075bda7f788668d9cc6b.bindPopup(popup_4a5054d0ea89bc78856dd17df3816354)
+        ;
+
+        
+    
+    
+            marker_4b1cc129e1be075bda7f788668d9cc6b.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c5b34d84fdcab45ec20ca48e0a8c170b = L.marker(
+                [3.5297, -76.29426],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_7fd3278800c635bfaa78e43f05fd820b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_c5b34d84fdcab45ec20ca48e0a8c170b.setIcon(icon_7fd3278800c635bfaa78e43f05fd820b);
+        
+    
+        var popup_86afee9bccc3d86bdd9c05dfd3bf7007 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd243f315b31a5346391a74392c2cf5b = $(`<div id="html_bd243f315b31a5346391a74392c2cf5b" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DESOBEDECER SEÑAL</p></div>`)[0];
+                popup_86afee9bccc3d86bdd9c05dfd3bf7007.setContent(html_bd243f315b31a5346391a74392c2cf5b);
+            
+        
+
+        marker_c5b34d84fdcab45ec20ca48e0a8c170b.bindPopup(popup_86afee9bccc3d86bdd9c05dfd3bf7007)
+        ;
+
+        
+    
+    
+            marker_c5b34d84fdcab45ec20ca48e0a8c170b.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a660ded16b42294240cae6e987e7365 = L.marker(
+                [3.54449, -76.31108],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_f9e5007fedd7a3d5adc71c1905171ab6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_5a660ded16b42294240cae6e987e7365.setIcon(icon_f9e5007fedd7a3d5adc71c1905171ab6);
+        
+    
+        var popup_c8250810537760fc64e817cea137b9b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_686eb519dd5734ea531e2ede706765af = $(`<div id="html_686eb519dd5734ea531e2ede706765af" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:GIRAR BRUSCAMENTE</p></div>`)[0];
+                popup_c8250810537760fc64e817cea137b9b9.setContent(html_686eb519dd5734ea531e2ede706765af);
+            
+        
+
+        marker_5a660ded16b42294240cae6e987e7365.bindPopup(popup_c8250810537760fc64e817cea137b9b9)
+        ;
+
+        
+    
+    
+            marker_5a660ded16b42294240cae6e987e7365.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c142a011cc7089f8e15fe0c8ad0f11cf = L.marker(
+                [3.50939, -76.30795],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_4f554680ba0a00248f13197b1c76f838 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_c142a011cc7089f8e15fe0c8ad0f11cf.setIcon(icon_4f554680ba0a00248f13197b1c76f838);
+        
+    
+        var popup_253fe9a60a9ab993833265c8c6538458 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0d5c95bd045a246d6537a57f7ff470d = $(`<div id="html_d0d5c95bd045a246d6537a57f7ff470d" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_253fe9a60a9ab993833265c8c6538458.setContent(html_d0d5c95bd045a246d6537a57f7ff470d);
+            
+        
+
+        marker_c142a011cc7089f8e15fe0c8ad0f11cf.bindPopup(popup_253fe9a60a9ab993833265c8c6538458)
+        ;
+
+        
+    
+    
+            marker_c142a011cc7089f8e15fe0c8ad0f11cf.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_347c39b8c5827b417a5626f79941661a = L.marker(
+                [3.55187, -76.29374],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_85a9514526a47dd40a120ce847fb6130 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_347c39b8c5827b417a5626f79941661a.setIcon(icon_85a9514526a47dd40a120ce847fb6130);
+        
+    
+        var popup_eb5032c725105b003f64b94f57c0cddc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11d6143662ee03b1857bfdf022d99bc9 = $(`<div id="html_11d6143662ee03b1857bfdf022d99bc9" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:SEMAFORO EN ROJO</p></div>`)[0];
+                popup_eb5032c725105b003f64b94f57c0cddc.setContent(html_11d6143662ee03b1857bfdf022d99bc9);
+            
+        
+
+        marker_347c39b8c5827b417a5626f79941661a.bindPopup(popup_eb5032c725105b003f64b94f57c0cddc)
+        ;
+
+        
+    
+    
+            marker_347c39b8c5827b417a5626f79941661a.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e6273fa5f0315908647007bb7e9b46ee = L.marker(
+                [3.52472, -76.29501],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_d00e40f6b55c454fac18110dea2f2db7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_e6273fa5f0315908647007bb7e9b46ee.setIcon(icon_d00e40f6b55c454fac18110dea2f2db7);
+        
+    
+        var popup_a194eaa77fcb122115b97ef18f2761b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc275595a5457690744d727bbfd6b874 = $(`<div id="html_cc275595a5457690744d727bbfd6b874" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DESOBEDECER SEÑALES DE PARE</p></div>`)[0];
+                popup_a194eaa77fcb122115b97ef18f2761b6.setContent(html_cc275595a5457690744d727bbfd6b874);
+            
+        
+
+        marker_e6273fa5f0315908647007bb7e9b46ee.bindPopup(popup_a194eaa77fcb122115b97ef18f2761b6)
+        ;
+
+        
+    
+    
+            marker_e6273fa5f0315908647007bb7e9b46ee.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9cfb7192c401a828eab0f7db67a84335 = L.marker(
+                [3.53467, -76.29674],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_4c389c9245b37f20bb6cd934ea88e698 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_9cfb7192c401a828eab0f7db67a84335.setIcon(icon_4c389c9245b37f20bb6cd934ea88e698);
+        
+    
+        var popup_ec63d89454532288d68bef0cf13679bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7eb143c5e2aea7a8520914799262aa50 = $(`<div id="html_7eb143c5e2aea7a8520914799262aa50" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DESOBEDECER SEÑALES DE PARE</p></div>`)[0];
+                popup_ec63d89454532288d68bef0cf13679bd.setContent(html_7eb143c5e2aea7a8520914799262aa50);
+            
+        
+
+        marker_9cfb7192c401a828eab0f7db67a84335.bindPopup(popup_ec63d89454532288d68bef0cf13679bd)
+        ;
+
+        
+    
+    
+            marker_9cfb7192c401a828eab0f7db67a84335.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5d41902e33561eed26366570d24fe4f = L.marker(
+                [3.52951, -76.30315],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_ec88e9f60f09532a1cc309afcbce7bea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_e5d41902e33561eed26366570d24fe4f.setIcon(icon_ec88e9f60f09532a1cc309afcbce7bea);
+        
+    
+        var popup_e55d9786a38175875831953c3cf5086f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a31dae5f60b2f101d4bb3af43c434b21 = $(`<div id="html_a31dae5f60b2f101d4bb3af43c434b21" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO RESPETAR PRELACION</p></div>`)[0];
+                popup_e55d9786a38175875831953c3cf5086f.setContent(html_a31dae5f60b2f101d4bb3af43c434b21);
+            
+        
+
+        marker_e5d41902e33561eed26366570d24fe4f.bindPopup(popup_e55d9786a38175875831953c3cf5086f)
+        ;
+
+        
+    
+    
+            marker_e5d41902e33561eed26366570d24fe4f.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0adac89b6b01c6feda8471e04b589bb8 = L.marker(
+                [3.57866, -76.29156],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_a1788d432e1342e2339cd37bc293a1a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_0adac89b6b01c6feda8471e04b589bb8.setIcon(icon_a1788d432e1342e2339cd37bc293a1a7);
+        
+    
+        var popup_54ba161732f4153f32041158c693e185 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba65b8fcacd14f3228373a81b84f00eb = $(`<div id="html_ba65b8fcacd14f3228373a81b84f00eb" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:INVADIR CARRIL</p></div>`)[0];
+                popup_54ba161732f4153f32041158c693e185.setContent(html_ba65b8fcacd14f3228373a81b84f00eb);
+            
+        
+
+        marker_0adac89b6b01c6feda8471e04b589bb8.bindPopup(popup_54ba161732f4153f32041158c693e185)
+        ;
+
+        
+    
+    
+            marker_0adac89b6b01c6feda8471e04b589bb8.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_80c9856858f648a19269247a63bbdfeb = L.marker(
+                [3.5249, -76.27815],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_32747892724deead211483bb47b72f0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_80c9856858f648a19269247a63bbdfeb.setIcon(icon_32747892724deead211483bb47b72f0a);
+        
+    
+        var popup_51abe797c8afa3457dfe3af22f2257a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ca62850ef281032878dd0a4bb0ceeab = $(`<div id="html_1ca62850ef281032878dd0a4bb0ceeab" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:MUERTO</p><p>Hipótesis del accidente:NO ESTAR PENDIENTE DE LA VIA</p></div>`)[0];
+                popup_51abe797c8afa3457dfe3af22f2257a7.setContent(html_1ca62850ef281032878dd0a4bb0ceeab);
+            
+        
+
+        marker_80c9856858f648a19269247a63bbdfeb.bindPopup(popup_51abe797c8afa3457dfe3af22f2257a7)
+        ;
+
+        
+    
+    
+            marker_80c9856858f648a19269247a63bbdfeb.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a2130173cf61942b36cd66cf83cff83 = L.marker(
+                [3.5249, -76.27815],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_6fdd9d6660923d6e3e81f389f9598f12 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_5a2130173cf61942b36cd66cf83cff83.setIcon(icon_6fdd9d6660923d6e3e81f389f9598f12);
+        
+    
+        var popup_3b087e23afb6702be09e5095677dfe32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_093cc0ecbf14e148c827589c6964b1c1 = $(`<div id="html_093cc0ecbf14e148c827589c6964b1c1" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:MUERTO</p><p>Hipótesis del accidente:NO ESTAR PENDIENTE DE LA VIA</p></div>`)[0];
+                popup_3b087e23afb6702be09e5095677dfe32.setContent(html_093cc0ecbf14e148c827589c6964b1c1);
+            
+        
+
+        marker_5a2130173cf61942b36cd66cf83cff83.bindPopup(popup_3b087e23afb6702be09e5095677dfe32)
+        ;
+
+        
+    
+    
+            marker_5a2130173cf61942b36cd66cf83cff83.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cbdc56526ad4e855a3074c4ae96cbe78 = L.marker(
+                [3.52072, -76.29097],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_ddee95549b5febe0f2fddb8cfdb08446 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_cbdc56526ad4e855a3074c4ae96cbe78.setIcon(icon_ddee95549b5febe0f2fddb8cfdb08446);
+        
+    
+        var popup_a202fdc73cc4820f73b90aebe3c20f0e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f4fea157d5fe0c48245edc86bfae044a = $(`<div id="html_f4fea157d5fe0c48245edc86bfae044a" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:DAÑOS</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_a202fdc73cc4820f73b90aebe3c20f0e.setContent(html_f4fea157d5fe0c48245edc86bfae044a);
+            
+        
+
+        marker_cbdc56526ad4e855a3074c4ae96cbe78.bindPopup(popup_a202fdc73cc4820f73b90aebe3c20f0e)
+        ;
+
+        
+    
+    
+            marker_cbdc56526ad4e855a3074c4ae96cbe78.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5f19f42212670ff302665623c06b1da4 = L.marker(
+                [3.52107, -76.27804],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_a16a45cc1c298e684665ee8087905c03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_5f19f42212670ff302665623c06b1da4.setIcon(icon_a16a45cc1c298e684665ee8087905c03);
+        
+    
+        var popup_406388c0ba5fa1856e3aa3281b2a91b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1d890652e9f87df197829a29d958a1f = $(`<div id="html_d1d890652e9f87df197829a29d958a1f" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO RESPETAR PRELACION</p></div>`)[0];
+                popup_406388c0ba5fa1856e3aa3281b2a91b0.setContent(html_d1d890652e9f87df197829a29d958a1f);
+            
+        
+
+        marker_5f19f42212670ff302665623c06b1da4.bindPopup(popup_406388c0ba5fa1856e3aa3281b2a91b0)
+        ;
+
+        
+    
+    
+            marker_5f19f42212670ff302665623c06b1da4.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81facfba41857ce39a609cd1ccad057f = L.marker(
+                [3.53819, -76.29728],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_c411777fcb6d106a300c845a787f40a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_81facfba41857ce39a609cd1ccad057f.setIcon(icon_c411777fcb6d106a300c845a787f40a2);
+        
+    
+        var popup_3c38a10e01cd248c39825e2f99cfbed8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a592f1b54ff3500a3238bcff4385dae8 = $(`<div id="html_a592f1b54ff3500a3238bcff4385dae8" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO ESTAR PENDIENTE DE LA VIA</p></div>`)[0];
+                popup_3c38a10e01cd248c39825e2f99cfbed8.setContent(html_a592f1b54ff3500a3238bcff4385dae8);
+            
+        
+
+        marker_81facfba41857ce39a609cd1ccad057f.bindPopup(popup_3c38a10e01cd248c39825e2f99cfbed8)
+        ;
+
+        
+    
+    
+            marker_81facfba41857ce39a609cd1ccad057f.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3cfb664e8d6abfb58d98ef7f1ad139c9 = L.marker(
+                [3.53521, -76.30036],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_c36696340ba151458744c6c765bf633a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_3cfb664e8d6abfb58d98ef7f1ad139c9.setIcon(icon_c36696340ba151458744c6c765bf633a);
+        
+    
+        var popup_865fb8bcb1843c46e6f77ff3f05823b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba92efd4d4ae6b115ba1d1b293ae9104 = $(`<div id="html_ba92efd4d4ae6b115ba1d1b293ae9104" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:DAÑOS</p><p>Hipótesis del accidente:TRANSITAR EN CONTRAVIA</p></div>`)[0];
+                popup_865fb8bcb1843c46e6f77ff3f05823b6.setContent(html_ba92efd4d4ae6b115ba1d1b293ae9104);
+            
+        
+
+        marker_3cfb664e8d6abfb58d98ef7f1ad139c9.bindPopup(popup_865fb8bcb1843c46e6f77ff3f05823b6)
+        ;
+
+        
+    
+    
+            marker_3cfb664e8d6abfb58d98ef7f1ad139c9.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_281624083d4149a545f415d8e3886b04 = L.marker(
+                [3.52369, -76.30028],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_7575196b89767788338a85097dfcf44b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_281624083d4149a545f415d8e3886b04.setIcon(icon_7575196b89767788338a85097dfcf44b);
+        
+    
+        var popup_56c12bed8a69f68cf6b342147c49859c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4fa6f22a4e80d8065cab5c8953d8630 = $(`<div id="html_d4fa6f22a4e80d8065cab5c8953d8630" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_56c12bed8a69f68cf6b342147c49859c.setContent(html_d4fa6f22a4e80d8065cab5c8953d8630);
+            
+        
+
+        marker_281624083d4149a545f415d8e3886b04.bindPopup(popup_56c12bed8a69f68cf6b342147c49859c)
+        ;
+
+        
+    
+    
+            marker_281624083d4149a545f415d8e3886b04.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_061d58cf43863b518b6cc2ef3271097e = L.marker(
+                [3.53711, -76.29073],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_162f429354e961858e008248a4dc9111 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_061d58cf43863b518b6cc2ef3271097e.setIcon(icon_162f429354e961858e008248a4dc9111);
+        
+    
+        var popup_2c6ddb1bc12fa3512ee457ab206be571 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b80cbb71850197615285c10fccd062b = $(`<div id="html_9b80cbb71850197615285c10fccd062b" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:GIRAR BRUSCAMENTE</p></div>`)[0];
+                popup_2c6ddb1bc12fa3512ee457ab206be571.setContent(html_9b80cbb71850197615285c10fccd062b);
+            
+        
+
+        marker_061d58cf43863b518b6cc2ef3271097e.bindPopup(popup_2c6ddb1bc12fa3512ee457ab206be571)
+        ;
+
+        
+    
+    
+            marker_061d58cf43863b518b6cc2ef3271097e.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_436253772157c58d86bd12e1235b1abb = L.marker(
+                [3.53885, -76.30988],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_0745eb2d19c1eae8ddf8e6492e4ce1ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_436253772157c58d86bd12e1235b1abb.setIcon(icon_0745eb2d19c1eae8ddf8e6492e4ce1ab);
+        
+    
+        var popup_219884c86823e51045712cd49d53fa1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99d9b666f2a9263bd3bac3d654d1c91b = $(`<div id="html_99d9b666f2a9263bd3bac3d654d1c91b" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO RESPETAR PRELACION</p></div>`)[0];
+                popup_219884c86823e51045712cd49d53fa1b.setContent(html_99d9b666f2a9263bd3bac3d654d1c91b);
+            
+        
+
+        marker_436253772157c58d86bd12e1235b1abb.bindPopup(popup_219884c86823e51045712cd49d53fa1b)
+        ;
+
+        
+    
+    
+            marker_436253772157c58d86bd12e1235b1abb.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e90fbdee2670515ffd0cdb336f320cd6 = L.marker(
+                [3.54605, -76.29602],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_7333ab799e080496efc4351dbee5519d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_e90fbdee2670515ffd0cdb336f320cd6.setIcon(icon_7333ab799e080496efc4351dbee5519d);
+        
+    
+        var popup_1923ee3b38dff951b69ae11420167507 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8cfdb314cf8e24ccff8bddb24608872 = $(`<div id="html_e8cfdb314cf8e24ccff8bddb24608872" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:CAMBIO DE CARRIL SIN INDICACION</p></div>`)[0];
+                popup_1923ee3b38dff951b69ae11420167507.setContent(html_e8cfdb314cf8e24ccff8bddb24608872);
+            
+        
+
+        marker_e90fbdee2670515ffd0cdb336f320cd6.bindPopup(popup_1923ee3b38dff951b69ae11420167507)
+        ;
+
+        
+    
+    
+            marker_e90fbdee2670515ffd0cdb336f320cd6.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e13e3a161568a95d913775b20e40de83 = L.marker(
+                [3.53057, -76.29416],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_06c10fb2db08158d50fcaf023aea51f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_e13e3a161568a95d913775b20e40de83.setIcon(icon_06c10fb2db08158d50fcaf023aea51f9);
+        
+    
+        var popup_2a299713d8991f6e64fe4d59b56dc741 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfe95a99aaa6a28c29d92779c80ecb2f = $(`<div id="html_cfe95a99aaa6a28c29d92779c80ecb2f" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DESOBEDECER SEÑALES</p></div>`)[0];
+                popup_2a299713d8991f6e64fe4d59b56dc741.setContent(html_cfe95a99aaa6a28c29d92779c80ecb2f);
+            
+        
+
+        marker_e13e3a161568a95d913775b20e40de83.bindPopup(popup_2a299713d8991f6e64fe4d59b56dc741)
+        ;
+
+        
+    
+    
+            marker_e13e3a161568a95d913775b20e40de83.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fab985b2d7c02b65bdc18829a3fd9fc3 = L.marker(
+                [3.50156, -76.22877],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_bfa8198cca75449f9ae1a11651be49ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_fab985b2d7c02b65bdc18829a3fd9fc3.setIcon(icon_bfa8198cca75449f9ae1a11651be49ea);
+        
+    
+        var popup_31da33a689e477afbf4dad2a586090e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac70969b465d409af2370813ef7264c6 = $(`<div id="html_ac70969b465d409af2370813ef7264c6" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:MUERTO</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_31da33a689e477afbf4dad2a586090e7.setContent(html_ac70969b465d409af2370813ef7264c6);
+            
+        
+
+        marker_fab985b2d7c02b65bdc18829a3fd9fc3.bindPopup(popup_31da33a689e477afbf4dad2a586090e7)
+        ;
+
+        
+    
+    
+            marker_fab985b2d7c02b65bdc18829a3fd9fc3.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5339bee3a0dc61c6db168af1d6c2574f = L.marker(
+                [3.50293, -76.31644],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_3472230f7e091f651316ea0d84d1f8be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_5339bee3a0dc61c6db168af1d6c2574f.setIcon(icon_3472230f7e091f651316ea0d84d1f8be);
+        
+    
+        var popup_db3b63d9d2eb9f1e65781e6e5b741cf9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dafe10e8021b150b0f478438fa3b28a6 = $(`<div id="html_dafe10e8021b150b0f478438fa3b28a6" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO ESTAR PENDIENTE DE LA VIA</p></div>`)[0];
+                popup_db3b63d9d2eb9f1e65781e6e5b741cf9.setContent(html_dafe10e8021b150b0f478438fa3b28a6);
+            
+        
+
+        marker_5339bee3a0dc61c6db168af1d6c2574f.bindPopup(popup_db3b63d9d2eb9f1e65781e6e5b741cf9)
+        ;
+
+        
+    
+    
+            marker_5339bee3a0dc61c6db168af1d6c2574f.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af3cd145ab53c68f760b166afd716e3e = L.marker(
+                [3.50881, -76.29591],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_573076ab14bf12a1f97313d9eb069404 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_af3cd145ab53c68f760b166afd716e3e.setIcon(icon_573076ab14bf12a1f97313d9eb069404);
+        
+    
+        var popup_2db8074b3740fa33376aa626aab751ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46d456f82d4d231cbd46ef7433fcac61 = $(`<div id="html_46d456f82d4d231cbd46ef7433fcac61" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:GIRAR BRUSCAMENTE</p></div>`)[0];
+                popup_2db8074b3740fa33376aa626aab751ba.setContent(html_46d456f82d4d231cbd46ef7433fcac61);
+            
+        
+
+        marker_af3cd145ab53c68f760b166afd716e3e.bindPopup(popup_2db8074b3740fa33376aa626aab751ba)
+        ;
+
+        
+    
+    
+            marker_af3cd145ab53c68f760b166afd716e3e.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9504b01e9398eb798e18e1dc0d6487e2 = L.marker(
+                [3.54768, -76.29527],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_5997c8dcd22334c5a635c4adfdae8594 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_9504b01e9398eb798e18e1dc0d6487e2.setIcon(icon_5997c8dcd22334c5a635c4adfdae8594);
+        
+    
+        var popup_8b8fb81e17c42a13a9f10ac571090e17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08b3b8a4bdcbadaf650c4cefd065769f = $(`<div id="html_08b3b8a4bdcbadaf650c4cefd065769f" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:CAMBIO DE CARRIL CON O SIN INDICACION</p></div>`)[0];
+                popup_8b8fb81e17c42a13a9f10ac571090e17.setContent(html_08b3b8a4bdcbadaf650c4cefd065769f);
+            
+        
+
+        marker_9504b01e9398eb798e18e1dc0d6487e2.bindPopup(popup_8b8fb81e17c42a13a9f10ac571090e17)
+        ;
+
+        
+    
+    
+            marker_9504b01e9398eb798e18e1dc0d6487e2.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8b6b092395f74abac3f52116791d1026 = L.marker(
+                [3.53807, -76.29899],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_36e85941e2cfebcae99e59e0d43163d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_8b6b092395f74abac3f52116791d1026.setIcon(icon_36e85941e2cfebcae99e59e0d43163d8);
+        
+    
+        var popup_a11e36bf3219caf844efe19ecbaa9bc3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16d66c4f73dbbcc42aabaddd066ca427 = $(`<div id="html_16d66c4f73dbbcc42aabaddd066ca427" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:SEMAFORO EN ROJO</p></div>`)[0];
+                popup_a11e36bf3219caf844efe19ecbaa9bc3.setContent(html_16d66c4f73dbbcc42aabaddd066ca427);
+            
+        
+
+        marker_8b6b092395f74abac3f52116791d1026.bindPopup(popup_a11e36bf3219caf844efe19ecbaa9bc3)
+        ;
+
+        
+    
+    
+            marker_8b6b092395f74abac3f52116791d1026.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d953d838afe9c86ebcd5fc5b62c3169 = L.marker(
+                [3.52456, -76.30013],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_05e77751ebbe378ee5447d535f054d77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_8d953d838afe9c86ebcd5fc5b62c3169.setIcon(icon_05e77751ebbe378ee5447d535f054d77);
+        
+    
+        var popup_8b6ea71e3849a356671cd88cb72a3d34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e907198cc8cb598ba474473f0663e189 = $(`<div id="html_e907198cc8cb598ba474473f0663e189" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DESOBEDECER SEÑALES</p></div>`)[0];
+                popup_8b6ea71e3849a356671cd88cb72a3d34.setContent(html_e907198cc8cb598ba474473f0663e189);
+            
+        
+
+        marker_8d953d838afe9c86ebcd5fc5b62c3169.bindPopup(popup_8b6ea71e3849a356671cd88cb72a3d34)
+        ;
+
+        
+    
+    
+            marker_8d953d838afe9c86ebcd5fc5b62c3169.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c422ba75064248ff82a044ffa86f75ce = L.marker(
+                [3.53702, -76.28932],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_e3f4fc78b5a27ebbb942fbe47b3a2ed1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_c422ba75064248ff82a044ffa86f75ce.setIcon(icon_e3f4fc78b5a27ebbb942fbe47b3a2ed1);
+        
+    
+        var popup_8b4fb3544a49161363b029a0f33dbf99 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc2ce18dbe506b786abd7ba9bedff223 = $(`<div id="html_bc2ce18dbe506b786abd7ba9bedff223" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DISMINUCION A LA VELOCIDAD</p></div>`)[0];
+                popup_8b4fb3544a49161363b029a0f33dbf99.setContent(html_bc2ce18dbe506b786abd7ba9bedff223);
+            
+        
+
+        marker_c422ba75064248ff82a044ffa86f75ce.bindPopup(popup_8b4fb3544a49161363b029a0f33dbf99)
+        ;
+
+        
+    
+    
+            marker_c422ba75064248ff82a044ffa86f75ce.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f0aeb0e1519c7840c4be4790baef864d = L.marker(
+                [3.53212, -76.27732],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_24f20fc2ebd473a7fa7560b21fea4fe1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_f0aeb0e1519c7840c4be4790baef864d.setIcon(icon_24f20fc2ebd473a7fa7560b21fea4fe1);
+        
+    
+        var popup_44f1b4a10e45547de333d783ecb79596 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_368b33be7e94cb1f04c7570fefa47d58 = $(`<div id="html_368b33be7e94cb1f04c7570fefa47d58" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:CAMBIO DE CARRIL CON O SIN INDICACION</p></div>`)[0];
+                popup_44f1b4a10e45547de333d783ecb79596.setContent(html_368b33be7e94cb1f04c7570fefa47d58);
+            
+        
+
+        marker_f0aeb0e1519c7840c4be4790baef864d.bindPopup(popup_44f1b4a10e45547de333d783ecb79596)
+        ;
+
+        
+    
+    
+            marker_f0aeb0e1519c7840c4be4790baef864d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed92ff41e4ea96748d45db579761787d = L.marker(
+                [3.53839, -76.30125],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_ef2b07a7511888a30c6a3a10cd1b81c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_ed92ff41e4ea96748d45db579761787d.setIcon(icon_ef2b07a7511888a30c6a3a10cd1b81c7);
+        
+    
+        var popup_f940e1aa05ed272383f3a42e9dfe4313 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c9fc099770d6ba5d90d8686abe7fa44 = $(`<div id="html_7c9fc099770d6ba5d90d8686abe7fa44" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_f940e1aa05ed272383f3a42e9dfe4313.setContent(html_7c9fc099770d6ba5d90d8686abe7fa44);
+            
+        
+
+        marker_ed92ff41e4ea96748d45db579761787d.bindPopup(popup_f940e1aa05ed272383f3a42e9dfe4313)
+        ;
+
+        
+    
+    
+            marker_ed92ff41e4ea96748d45db579761787d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9fc2bc6d8ee35e96d435f252c2408f0b = L.marker(
+                [3.4986, -76.31963],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_a9870c624411a0a874d49ab1ffd45a98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_9fc2bc6d8ee35e96d435f252c2408f0b.setIcon(icon_a9870c624411a0a874d49ab1ffd45a98);
+        
+    
+        var popup_cfc2e5ed6bc4883c7554df0d4d4a3db7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9da8f16bf54e372fefc29c535036076f = $(`<div id="html_9da8f16bf54e372fefc29c535036076f" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO UTILIZAR DISPOSITIVOS LUMINOSOS</p></div>`)[0];
+                popup_cfc2e5ed6bc4883c7554df0d4d4a3db7.setContent(html_9da8f16bf54e372fefc29c535036076f);
+            
+        
+
+        marker_9fc2bc6d8ee35e96d435f252c2408f0b.bindPopup(popup_cfc2e5ed6bc4883c7554df0d4d4a3db7)
+        ;
+
+        
+    
+    
+            marker_9fc2bc6d8ee35e96d435f252c2408f0b.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_49de903098f05829a3516e4f50e9b386 = L.marker(
+                [3.52898, -76.30576],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_0ce66bf95554ac84894151541e53b971 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_49de903098f05829a3516e4f50e9b386.setIcon(icon_0ce66bf95554ac84894151541e53b971);
+        
+    
+        var popup_1799619eb0f0267b7ccb9bd31d18c6b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd441411e1b712042b4e962c8c870563 = $(`<div id="html_fd441411e1b712042b4e962c8c870563" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:SEMAFORO EN ROJO</p></div>`)[0];
+                popup_1799619eb0f0267b7ccb9bd31d18c6b5.setContent(html_fd441411e1b712042b4e962c8c870563);
+            
+        
+
+        marker_49de903098f05829a3516e4f50e9b386.bindPopup(popup_1799619eb0f0267b7ccb9bd31d18c6b5)
+        ;
+
+        
+    
+    
+            marker_49de903098f05829a3516e4f50e9b386.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_49373a7128f0a933d089b373a389989d = L.marker(
+                [3.53327, -76.30557],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_03b63be086bdf456a721ca89a8c9b191 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_49373a7128f0a933d089b373a389989d.setIcon(icon_03b63be086bdf456a721ca89a8c9b191);
+        
+    
+        var popup_4fd03e7b3773c3e7abda913aaf854b17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5df09124b516e2307ec145a7b2853735 = $(`<div id="html_5df09124b516e2307ec145a7b2853735" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:TRANSITAR EN CONTRA VIA</p></div>`)[0];
+                popup_4fd03e7b3773c3e7abda913aaf854b17.setContent(html_5df09124b516e2307ec145a7b2853735);
+            
+        
+
+        marker_49373a7128f0a933d089b373a389989d.bindPopup(popup_4fd03e7b3773c3e7abda913aaf854b17)
+        ;
+
+        
+    
+    
+            marker_49373a7128f0a933d089b373a389989d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6fcf69dfd0566e60377001d78c621005 = L.marker(
+                [3.61838, -76.42282],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_205c8846fac8f0ce380e5248703b61f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_6fcf69dfd0566e60377001d78c621005.setIcon(icon_205c8846fac8f0ce380e5248703b61f4);
+        
+    
+        var popup_6c593b102705af570615418a4ad27eec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f2d5947f3d9fd31f282d5b4bd1cc2fd = $(`<div id="html_1f2d5947f3d9fd31f282d5b4bd1cc2fd" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:MUERTO</p><p>Hipótesis del accidente:CAMBIO DE CARRIL CON O SIN INDICACION</p></div>`)[0];
+                popup_6c593b102705af570615418a4ad27eec.setContent(html_1f2d5947f3d9fd31f282d5b4bd1cc2fd);
+            
+        
+
+        marker_6fcf69dfd0566e60377001d78c621005.bindPopup(popup_6c593b102705af570615418a4ad27eec)
+        ;
+
+        
+    
+    
+            marker_6fcf69dfd0566e60377001d78c621005.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_89a3708adb79745a849490b1a37a18f1 = L.marker(
+                [3.53399, -76.29055],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_a423f4b2b374acfe0f52262a52bb02dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_89a3708adb79745a849490b1a37a18f1.setIcon(icon_a423f4b2b374acfe0f52262a52bb02dc);
+        
+    
+        var popup_55e803c309bdbcaae91641c8d9aee4e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2ed2ec025e37c5dd62b73ac8f59d5ed6 = $(`<div id="html_2ed2ec025e37c5dd62b73ac8f59d5ed6" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:CRUZAR SIN OBSERVAR</p></div>`)[0];
+                popup_55e803c309bdbcaae91641c8d9aee4e2.setContent(html_2ed2ec025e37c5dd62b73ac8f59d5ed6);
+            
+        
+
+        marker_89a3708adb79745a849490b1a37a18f1.bindPopup(popup_55e803c309bdbcaae91641c8d9aee4e2)
+        ;
+
+        
+    
+    
+            marker_89a3708adb79745a849490b1a37a18f1.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_57a236b0d6a4fc8ca4d06fbee0b54e6d = L.marker(
+                [3.54724, -76.26224],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_7db2ece439d4aa427f15b53fede488dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_57a236b0d6a4fc8ca4d06fbee0b54e6d.setIcon(icon_7db2ece439d4aa427f15b53fede488dc);
+        
+    
+        var popup_76bac43618e9632310ac8cc2d17a18f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9c028aed0ba44bb626bfd9e2fba8abe = $(`<div id="html_e9c028aed0ba44bb626bfd9e2fba8abe" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:ADEALNTAR ZON PROHIBIDA</p></div>`)[0];
+                popup_76bac43618e9632310ac8cc2d17a18f3.setContent(html_e9c028aed0ba44bb626bfd9e2fba8abe);
+            
+        
+
+        marker_57a236b0d6a4fc8ca4d06fbee0b54e6d.bindPopup(popup_76bac43618e9632310ac8cc2d17a18f3)
+        ;
+
+        
+    
+    
+            marker_57a236b0d6a4fc8ca4d06fbee0b54e6d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a70c28c4fd378a27c4fa420f6a632349 = L.marker(
+                [3.5497, -76.30943],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_2aef5cf63038def982a9a584e66af475 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_a70c28c4fd378a27c4fa420f6a632349.setIcon(icon_2aef5cf63038def982a9a584e66af475);
+        
+    
+        var popup_06b8184201aa7b2690ccc48a243d7f68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd67fc35a4b4b8d02cff529195e00a93 = $(`<div id="html_dd67fc35a4b4b8d02cff529195e00a93" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_06b8184201aa7b2690ccc48a243d7f68.setContent(html_dd67fc35a4b4b8d02cff529195e00a93);
+            
+        
+
+        marker_a70c28c4fd378a27c4fa420f6a632349.bindPopup(popup_06b8184201aa7b2690ccc48a243d7f68)
+        ;
+
+        
+    
+    
+            marker_a70c28c4fd378a27c4fa420f6a632349.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_47532499dfeab29f604bdb4d835c4051 = L.marker(
+                [3.54259, -76.29101],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_41a09c6cca732b1283ee6948d0b63645 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_47532499dfeab29f604bdb4d835c4051.setIcon(icon_41a09c6cca732b1283ee6948d0b63645);
+        
+    
+        var popup_8deb9ecd8b661732bbcce470c4097619 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b762ca934d2db8e9ce9d7f5b02b2aaa = $(`<div id="html_1b762ca934d2db8e9ce9d7f5b02b2aaa" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO MANTENER DISTANCIA</p></div>`)[0];
+                popup_8deb9ecd8b661732bbcce470c4097619.setContent(html_1b762ca934d2db8e9ce9d7f5b02b2aaa);
+            
+        
+
+        marker_47532499dfeab29f604bdb4d835c4051.bindPopup(popup_8deb9ecd8b661732bbcce470c4097619)
+        ;
+
+        
+    
+    
+            marker_47532499dfeab29f604bdb4d835c4051.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_650804c3507a575a9d3dbbd4236c7447 = L.marker(
+                [3.54956, -76.29451],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_a6efcf5b89a63f4a4ff9214cc8a1b551 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_650804c3507a575a9d3dbbd4236c7447.setIcon(icon_a6efcf5b89a63f4a4ff9214cc8a1b551);
+        
+    
+        var popup_75f5b53266a0d6e2566295fb29b7c5a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0e6a08d451140cf4a15cce597e21816 = $(`<div id="html_a0e6a08d451140cf4a15cce597e21816" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO MANTENER DISTANCIA</p></div>`)[0];
+                popup_75f5b53266a0d6e2566295fb29b7c5a9.setContent(html_a0e6a08d451140cf4a15cce597e21816);
+            
+        
+
+        marker_650804c3507a575a9d3dbbd4236c7447.bindPopup(popup_75f5b53266a0d6e2566295fb29b7c5a9)
+        ;
+
+        
+    
+    
+            marker_650804c3507a575a9d3dbbd4236c7447.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_66140b739a1774a25f60a5d6ab7d5d77 = L.marker(
+                [3.53633, -76.30115],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_2d70e6d591cddf073392538836841a11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_66140b739a1774a25f60a5d6ab7d5d77.setIcon(icon_2d70e6d591cddf073392538836841a11);
+        
+    
+        var popup_5b38bcf8d375a24a2dfcc87c4943b5a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3f97f00ee501e763c00377465591d45 = $(`<div id="html_f3f97f00ee501e763c00377465591d45" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:NO ESTAR PENDIENTE DE LA VIA</p></div>`)[0];
+                popup_5b38bcf8d375a24a2dfcc87c4943b5a9.setContent(html_f3f97f00ee501e763c00377465591d45);
+            
+        
+
+        marker_66140b739a1774a25f60a5d6ab7d5d77.bindPopup(popup_5b38bcf8d375a24a2dfcc87c4943b5a9)
+        ;
+
+        
+    
+    
+            marker_66140b739a1774a25f60a5d6ab7d5d77.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_596783e69605c4e600c0b08c46b16421 = L.marker(
+                [3.52509, -76.27826],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_1515f1ce863857c16b95693d96e978ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_596783e69605c4e600c0b08c46b16421.setIcon(icon_1515f1ce863857c16b95693d96e978ec);
+        
+    
+        var popup_3e6dc48131cd2a58280fbc9491a5adbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75a9e1c1d5f93fb4d41913996c5a5ff0 = $(`<div id="html_75a9e1c1d5f93fb4d41913996c5a5ff0" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DISTRAERSE</p></div>`)[0];
+                popup_3e6dc48131cd2a58280fbc9491a5adbd.setContent(html_75a9e1c1d5f93fb4d41913996c5a5ff0);
+            
+        
+
+        marker_596783e69605c4e600c0b08c46b16421.bindPopup(popup_3e6dc48131cd2a58280fbc9491a5adbd)
+        ;
+
+        
+    
+    
+            marker_596783e69605c4e600c0b08c46b16421.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e95a4561a9bdf6b3079526796cd267b3 = L.marker(
+                [3.54093, -76.29093],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_479ace41d681fbb890393f4f29fcfe8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_e95a4561a9bdf6b3079526796cd267b3.setIcon(icon_479ace41d681fbb890393f4f29fcfe8e);
+        
+    
+        var popup_1659c5ca8cbbb7b1bdaf2add3dc87ad2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_973953a9e6c5ca9ef9f44a04f1c9ef81 = $(`<div id="html_973953a9e6c5ca9ef9f44a04f1c9ef81" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_1659c5ca8cbbb7b1bdaf2add3dc87ad2.setContent(html_973953a9e6c5ca9ef9f44a04f1c9ef81);
+            
+        
+
+        marker_e95a4561a9bdf6b3079526796cd267b3.bindPopup(popup_1659c5ca8cbbb7b1bdaf2add3dc87ad2)
+        ;
+
+        
+    
+    
+            marker_e95a4561a9bdf6b3079526796cd267b3.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad3cc3cfaacaf9754da205a0975cfa79 = L.marker(
+                [3.52684, -76.29809],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_99f62524ddc1848fb94ccbe22a450caa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_ad3cc3cfaacaf9754da205a0975cfa79.setIcon(icon_99f62524ddc1848fb94ccbe22a450caa);
+        
+    
+        var popup_65d3726a6db3780d800a6612ac9aeef9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3357cd23fcea841cc2ee4a32b44a6e5 = $(`<div id="html_e3357cd23fcea841cc2ee4a32b44a6e5" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:INVADIR CARRIL DEL MISMO SENTIDO</p></div>`)[0];
+                popup_65d3726a6db3780d800a6612ac9aeef9.setContent(html_e3357cd23fcea841cc2ee4a32b44a6e5);
+            
+        
+
+        marker_ad3cc3cfaacaf9754da205a0975cfa79.bindPopup(popup_65d3726a6db3780d800a6612ac9aeef9)
+        ;
+
+        
+    
+    
+            marker_ad3cc3cfaacaf9754da205a0975cfa79.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cb1bf0b06596ef72600434237818eb07 = L.marker(
+                [3.50271, -76.31674],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_36352f6def44f2e961eb19ab9013b5a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_cb1bf0b06596ef72600434237818eb07.setIcon(icon_36352f6def44f2e961eb19ab9013b5a1);
+        
+    
+        var popup_03e93ada6fee82c0196b484eb5b89525 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ee0989c9c6dbe1541e3ee8848d539ca = $(`<div id="html_3ee0989c9c6dbe1541e3ee8848d539ca" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: BICICLETA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:POR ESTABLECER</p></div>`)[0];
+                popup_03e93ada6fee82c0196b484eb5b89525.setContent(html_3ee0989c9c6dbe1541e3ee8848d539ca);
+            
+        
+
+        marker_cb1bf0b06596ef72600434237818eb07.bindPopup(popup_03e93ada6fee82c0196b484eb5b89525)
+        ;
+
+        
+    
+    
+            marker_cb1bf0b06596ef72600434237818eb07.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb0440a53909351fb39e4dfdf27f231c = L.marker(
+                [3.52382, -76.30132],
+                {}
+            ).addTo(map_fe946a0c2c1e5ae606fb2abc3590c643);
+        
+    
+            var icon_b93d33360bb4433bcce343984b63bc45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "black", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_eb0440a53909351fb39e4dfdf27f231c.setIcon(icon_b93d33360bb4433bcce343984b63bc45);
+        
+    
+        var popup_6cfaebcd072124284ac9170e30006635 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0551a6562038dbd16d800666d717dd5e = $(`<div id="html_0551a6562038dbd16d800666d717dd5e" style="width: 100.0%; height: 100.0%;"><p>Choque de vehículo tipo: CICLISTA</p><p>Nivel de gravedad:HERIDOS</p><p>Hipótesis del accidente:DESOBEDECER SEÑALES</p></div>`)[0];
+                popup_6cfaebcd072124284ac9170e30006635.setContent(html_0551a6562038dbd16d800666d717dd5e);
+            
+        
+
+        marker_eb0440a53909351fb39e4dfdf27f231c.bindPopup(popup_6cfaebcd072124284ac9170e30006635)
+        ;
+
+        
+    
+    
+            marker_eb0440a53909351fb39e4dfdf27f231c.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

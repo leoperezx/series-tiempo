@@ -1,6 +1,15 @@
 import folium
 import numpy as np
 import random
+import pandas as pd
+import os
+
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)
+
 
 def colores(vehiculos):
     color_vehiculos = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)]) for i in range(len(vehiculos))]
@@ -57,28 +66,46 @@ def generarMapa(data,opciones):
 
     '''
     
-    print( colores(opciones) ) # crea tantos colores aleatorios como vehiculos selecionados 
+    # COLOR = colores(opciones)
 
+    # Me recervo los colores: 'red' y'white'
+    COLORS_BASE = ['darkgreen', 'darkred', 'darkblue', 'darkpurple', 'orange', 'purple', 'blue', 'lightgray', 'pink', 'lightblue', 'lightgreen', 'lightred', 'gray', 'beige', 'cadetblue', 'green'] 
+    # Toma la cantidad de colores necesarios según la cantidad de opciones seleccionadas.
+    COLORS_SELECTED=COLORS_BASE[:len(opciones)]
+
+    for j in range(len(opciones)):
+        # imprime una tabla de conversión.
+        print("* - "*20 + "\n")
+        print("Los vehículos {} son los puntos {}.\n".format(opciones[j], COLORS_SELECTED[j]))
+
+    # Filtra de todo el dataframe solo los vehículos secionados.
     data_filter = data.loc[data['CLASE_DE_VEHICULO'].isin(opciones)] 
 
-    # for index in opciones:
-    #     print(opciones[index])
+    data['COLOR'] = '' # crea una columna nueva llamada COLOR que sin datos.
+    dataframe = pd.DataFrame() # crea un dataframe vacio sin datos.
 
-    # for index in opciones:
-    #     data_filter["color"] = data.loc[data['CLASE_DE_VEHICULO'].isin(opciones[index])] 
+    # Juntando información en el nuevo dataframe
+    for index in range(len(opciones)):
+        # Guarda la información por tipo de vehículo.
+        data_filter = data.loc[data['CLASE_DE_VEHICULO'].isin( [opciones[index]] )]
+        # Guarda un color por tipo de vehículo.
+        data_filter['COLOR'] = COLORS_SELECTED[index]
+        # Apila la información.
+        dataframe = dataframe._append(data_filter)
     
-    # print(data_filter.head())
-    
+    # print(dataframe)
+      
     some_map = folium.Map(location=(3.535513,-76.297656),tiles="cartodbpositron", zoom_start=10)
 
     tool_tip="Click me!"    
 
 
-    for row in data_filter.itertuples():
+    for row in dataframe.itertuples():
         pop_up=("<p>Choque de vehículo tipo: " + row.CLASE_DE_VEHICULO +"</p>" +
                     "<p>Nivel de gravedad:" + row.GRAVEDAD + "</p>" + 
                     "<p>Hipótesis del accidente:" + row.HIPOTESIS + "</p>")
         
-        folium.Marker([row.LAT,row.LONG], popup=pop_up, tooltip=tool_tip, icon=folium.Icon(color='#F1F2F6',icon_color='#FFABAB')).add_to(some_map)
+        folium.Marker([row.LAT,row.LONG], popup=pop_up, tooltip=tool_tip, icon=folium.Icon(color=row.COLOR,icon_color='black')).add_to(some_map) 
+        # color='#F1F2F6',icon_color='#FFABAB'
 
     return some_map.save("map.html")

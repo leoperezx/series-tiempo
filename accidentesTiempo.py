@@ -29,18 +29,24 @@ print("*** "*10)
 # orden de aparicion en la columna CLASE_DE_VEHIVULO.
 # El comando np.unique(df.CLASE_DE_VEHICULO) lo ordena de menor
 # a mayor.
+
+
 lista_vehiculos = np.unique(df.CLASE_DE_VEHICULO)
+fn.clearConsole()
+print("* - "*20)
 for item, vehiculos in enumerate(lista_vehiculos, start=1):
     print(item, vehiculos)
 
-vehiculo_seleccionados = input("\nIngresar número a analizar o números separados por un espacio: ")
+print("* - "*20)
+vehiculo_seleccionados = input("\nIngresar número o números separados por un espacio: ")
 lista = fn.convert(lista_vehiculos,vehiculo_seleccionados)
 
 
-
+# # # Para generar el mapa solo descomenta las siguientes lineas de código
+# # # ------------------------------------------
 # # Generar mapa con las opciones ingresadas
-# fn.generarMapa(df,lista)
+fn.generarMapa(df,lista)
 
-# # Abre el archivo map.html  
-# filename = 'file:///'+os.getcwd()+'/' + 'map.html'
-# webbrowser.open_new_tab(filename)
+# Abre el archivo map.html  
+filename = 'file:///'+os.getcwd()+'/' + 'map.html'
+webbrowser.open_new_tab(filename)
