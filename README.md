@@ -32,4 +32,4 @@ Al final, presenta una serie de puntos en un mapa. Cada punto muestra una pequeÃ
 
 La anterior imgen es un ejemplo de como debe ser el resultado final.
 
-> &copy; 2023 LeoPerez: [@leoperezx](https://linkr.bio/2op3pq)
+> &copy; 2023 [| -------> leoperezx](https://linkr.bio/2op3pq)
