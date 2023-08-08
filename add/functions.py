@@ -3,6 +3,7 @@ import numpy as np
 import random
 import pandas as pd
 import os
+import matplotlib.pyplot as plt
 
 def clearConsole():
     command = 'clear'
@@ -10,8 +11,21 @@ def clearConsole():
         command = 'cls'
     os.system(command)
 
+def listaVehiculos(df):
+    # exite otra forma de obtener los datos únicos de un atributo:
+    # df.CLASE_DE_VEHICULOS.unique() pero el orden es por el mismo
+    # orden de aparicion en la columna CLASE_DE_VEHIVULO.
+    # El comando np.unique(df.CLASE_DE_VEHICULO) lo ordena de menor
+    # a mayor o alfabéticamente.
+    lista_vehiculos = np.unique(df.CLASE_DE_VEHICULO)
+    
+    for item, vehiculos in enumerate(lista_vehiculos, start=1):
+        print(item, vehiculos)
+
+    return lista_vehiculos
 
 def colores(vehiculos):
+    # genera una lista de colores en formato hex [#xxyyzz]
     color_vehiculos = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)]) for i in range(len(vehiculos))]
     return color_vehiculos
 
@@ -24,49 +38,71 @@ def convert(vehiculos,seleccion_de_vehiculos):
     li = list(seleccion_de_vehiculos.split(" ")) 
     # Cambia str a int elento por elemento
     res = [eval(i) for i in li] 
-    # Resta uno a cada elemeto de la lista
+    # Resta uno a cada elemento de la lista
     lista = list(np.subtract(res, 1)) 
     # Asocia los numeros ingresados con la lista de vehículos
     seleccion = [ vehiculos[ lista[i] ] for i in range(len(lista))] 
 
     return seleccion
-    
+   
+def darFormatoFecha(dataFrame):
+    # Solo se deja información de utilidad debido a que la 
+    # información de la celda contiene ruido.
+    # Cada una de las entradas de FECHA viene 
+    # al final con la misma hora. ( 01/01/2020 12:00:00 AM )
+    dataFrame["FECHA"] = dataFrame["FECHA"].apply(lambda x: x[:10]) # se corta la información para toda la columna FECHA
+    dataFrame["FECHA"] = pd.to_datetime(dataFrame["FECHA"],format = '%m/%d/%Y') # se le da formato datetime a lo que queda
 
+    # Caso similar con HORA donde la información relevante 
+    # se encuentra en medio del String. ( 1899-12-31T19:10:00.000 )
+    dataFrame["HORA"] = dataFrame["HORA"].apply(lambda x: x[11:16])
+    print(dataFrame["HORA"])
+    dataFrame["HORA"] = pd.to_datetime(dataFrame["HORA"])
+    
+    return dataFrame
+
+def preparando_grafica(data,vehiculos_seleccionados):
+    # Duccionario vacio
+    datos_a_graficar = {}
+    # iterando vehículos seleccionados
+    for vehiculo in vehiculos_seleccionados:
+        # se filtra la información por tipo de vehículo
+        data_filter = data.loc[data['CLASE_DE_VEHICULO'].isin([vehiculo])]
+        # se guarda, se agrupa y se cuenta las veces del accidente con la misma fecha 
+        datos_a_graficar[vehiculo] = pd.DataFrame(data_filter.groupby(["FECHA"])["CLASE_DE_VEHICULO"].agg('count'))
+        
+    return datos_a_graficar
+
+# pendiete de realizar la función que grafica
+def creandoGraficas(datos_vehiculos_seleccionados):
+    # print(datos_vehiculos_seleccionados)
+    
+    plt.style.use("tableau-colorblind10") #seaborn-whitegrid, Solarized_Light, ggplot
+    plt.title("Gráfica de accidentes - Palmira 2020")
+    plt.grid(True, which="minor", color="gray")
+    
+    for items in datos_vehiculos_seleccionados:
+        # cada item es una serie de tiempo y se grafica directamente.
+        dt_grafica = datos_vehiculos_seleccionados[items]
+        # acumula las diferentes graficas
+        plt.plot(dt_grafica.CLASE_DE_VEHICULO,marker="o")
+        # imprime la etiquetas de los vehículos seleccionados.
+        plt.ylabel(items)
+    # imprime las gráficas
+    plt.show()
+
+def graficarHistorico(data):
+    # preparando la información
+    historico = data.groupby(["FECHA"]).size().reset_index(name="ACCIDENTES")
+    # grafica
+    plt.style.use("tableau-colorblind10") #seaborn-whitegrid, Solarized_Light, ggplot
+    historico.plot.line(x="FECHA", y="ACCIDENTES")
+    plt.ylabel("Número de accidentes.")
+    plt.title("Gráfica de accidentes en 2020 en Palmira.")
+    plt.show()   
+
+# pendiente de partir esta funcion en dos funciones. Una que prepare y otra que grafique el mapa
 def generarMapa(data,opciones):
-    '''
-    Organiza la información de la base de datos para dibujar en un mapa 
-    cada uno de los puntos georeferenciados para ubicar cada uno de los 
-    accidentes registrados en el año 2020 en Palmira. 
-
-    lista disponible de atributos de la base de datos son:
-    GRAVEDAD,
-    FECHA,
-    AÑO,
-    HORA,
-    JORNADA,
-    DIA_SEMANA,
-    BARRIOS_CORREGIMIENTO_VIA,
-    DIRECCION,
-    ZONA,
-    AUTORIDAD,
-    LAT,
-    LONG,
-    HIPOTESIS,
-    CONDICION_DE_LA_VICTIMA,
-    CLASE_DE_SINIESTRO,
-    LESIONADO,
-    HOMICIDIOS,
-    CLINICA,
-    SITIO,
-    CLASE_DE_VEHICULO,
-    MARCA,
-    MATRICULA,
-    TIPO_DE_SERVICIO,
-    EMPRESA,,
-
-    '''
-    
-    # COLOR = colores(opciones)
 
     # Me recervo los colores: 'red' y'white'
     COLORS_BASE = ['darkgreen', 'darkred', 'darkblue', 'darkpurple', 'orange', 'purple', 'blue', 'lightgray', 'pink', 'lightblue', 'lightgreen', 'lightred', 'gray', 'beige', 'cadetblue', 'green'] 
@@ -90,10 +126,12 @@ def generarMapa(data,opciones):
         data_filter = data.loc[data['CLASE_DE_VEHICULO'].isin( [opciones[index]] )]
         # Guarda un color por tipo de vehículo.
         data_filter['COLOR'] = COLORS_SELECTED[index]
+        # prerando la data para graficar series de tiempo
+        data_vehiculos = preparando_grafica(data,opciones)
         # Apila la información.
         dataframe = dataframe._append(data_filter)
     
-    # print(dataframe)
+    print(data_vehiculos)
       
     some_map = folium.Map(location=(3.535513,-76.297656),tiles="cartodbpositron", zoom_start=10)
 

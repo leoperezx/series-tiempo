@@ -8,6 +8,36 @@ El motivo de este segundo repositorio es trabajar mas en la parte de filtros, ma
 
 Se plantea de forma inicial solo usar _Python_ para este proyecto. En el directorio _add_ se encuentra un archivo con funciones y la base de datos inicial.
 
+## Información de la base de datos
+
+Organiza la información de la base de datos para dibujar en un mapa cada uno de los puntos georeferenciados para ubicar cada uno de los accidentes registrados en el año 2020 en Palmira.
+
+lista disponible de atributos de la base de datos son:
+    - GRAVEDAD
+    - FECHA
+    - AÑO
+    - HORA
+    - JORNADA
+    - DIA_SEMANA
+    - BARRIOS_CORREGIMIENTO_VIA
+    - DIRECCION
+    - ZONA
+    - AUTORIDAD
+    - LAT
+    - LONG
+    - HIPOTESIS
+    - CONDICION_DE_LA_VICTIMA
+    - CLASE_DE_SINIESTRO
+    - LESIONADO
+    - HOMICIDIOS
+    - CLINICA
+    - SITIO
+    - CLASE_DE_VEHICULO
+    - MARCA
+    - MATRICULA
+    - TIPO_DE_SERVICIO
+    - EMPRESA
+
 ## Requirements
 
 En el archivo _requirements.txt_ se encuentran los paquetes de Python que he utilizado para este pequeño Script. 
@@ -31,5 +61,9 @@ Al final, presenta una serie de puntos en un mapa. Cada punto muestra una peque�
 ![lista de vehículos](/add/presentacion3.PNG)
 
 La anterior imgen es un ejemplo de como debe ser el resultado final.
+
+## Gráficas
+
+Al realizar la selección de vehículos se realiza la programación de un función para realizar una gráfica. Esta solo grafica los vehículos seleccionados. en adelante se busca realizar muchos tipos de gráficas relacionadas con estadística.
 
 > &copy; 2023 [| -------> leoperezx](https://linkr.bio/2op3pq)
