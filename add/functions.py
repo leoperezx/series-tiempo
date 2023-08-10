@@ -4,6 +4,7 @@ import random
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 def clearConsole():
     command = 'clear'
@@ -56,12 +57,23 @@ def darFormatoFecha(dataFrame):
     # Caso similar con HORA donde la información relevante 
     # se encuentra en medio del String. ( 1899-12-31T19:10:00.000 )
     dataFrame["HORA"] = dataFrame["HORA"].apply(lambda x: x[11:16])
-    print(dataFrame["HORA"])
+    # print(dataFrame["HORA"])
     dataFrame["HORA"] = pd.to_datetime(dataFrame["HORA"])
     
     return dataFrame
 
 def preparando_grafica(data,vehiculos_seleccionados):
+    '''
+    Función que entrega un diccionario donde las KEYs son los vehiculos seleccionados 
+    y los valores son un conjunto Series de tiempo 
+    {
+        "seleccion1": "CLASE_DE_VEHICULO" : [Serie],
+        "seleccion2": "CLASE_DE_VEHICULO" : [Serie], 
+        .
+        .
+        
+    }
+    '''
     # Duccionario vacio
     datos_a_graficar = {}
     # iterando vehículos seleccionados
@@ -73,10 +85,30 @@ def preparando_grafica(data,vehiculos_seleccionados):
         
     return datos_a_graficar
 
-# pendiete de realizar la función que grafica
-def creandoGraficas(datos_vehiculos_seleccionados):
-    # print(datos_vehiculos_seleccionados)
+def creandoSubGraficas(datos_vehiculos_seleccionados):
+    num = len(datos_vehiculos_seleccionados)
+    fig,ax=plt.subplots(num,1)
     
+    print("width: {} | height: {} | dpi: {}".format(fig.get_figwidth(),fig.get_figheight(),fig.get_dpi())) 
+    i = 0
+    for vehiculos in datos_vehiculos_seleccionados:
+        dt_grafica = datos_vehiculos_seleccionados[vehiculos]
+        df_grafica = dt_grafica.CLASE_DE_VEHICULO.to_frame().reset_index()
+        dfg = df_grafica.rename(columns = {"CLASE_DE_VEHICULO":"ACCIDENTES"})
+                                                
+        ax[i].plot(dfg["FECHA"], dfg["ACCIDENTES"],color='purple')
+        ax[i].set_xlabel("Tiempo - Año 2023", fontsize=10)
+        ax[i].set_ylabel(vehiculos, fontsize=10)
+        ax[i].xaxis.set_major_formatter(mdates.DateFormatter('%m/%d'))
+        ax[i].grid(True)
+        i+=1
+    
+    fig.suptitle('Gráficas de accidentes de vehículos seleccionados', fontsize=16)
+    fig.tight_layout(pad=1)
+    plt.show()
+    
+def creandoGraficas(datos_vehiculos_seleccionados):
+    # print(datos_vehiculos_seleccionados)    
     plt.style.use("tableau-colorblind10") #seaborn-whitegrid, Solarized_Light, ggplot
     plt.title("Gráfica de accidentes - Palmira 2020")
     plt.grid(True, which="minor", color="gray")
@@ -100,6 +132,9 @@ def graficarHistorico(data):
     plt.ylabel("Número de accidentes.")
     plt.title("Gráfica de accidentes en 2020 en Palmira.")
     plt.show()   
+
+# Pendiente de hacer un analisis de frecuencia.
+# https://relopezbriega.github.io/blog/2016/09/26/series-de-tiempo-con-python/
 
 # pendiente de partir esta funcion en dos funciones. Una que prepare y otra que grafique el mapa
 def generarMapa(data,opciones):

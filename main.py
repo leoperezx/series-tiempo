@@ -26,7 +26,8 @@ if __name__=="__main__":
     vehiculos_seleccionados = fn.convert(lista_vehiculos,seleccionando_vehiculos)
     # Crea gráfica general (todos los datos)
     # df_diario = fn.graficarHistorico(df)
-    fn.creandoGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
+    # fn.creandoGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
+    fn.creandoSubGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
     
     # seleccion_vehiculos_grafica = fn.preparando_grafica(df,lista)
     # print(seleccion_vehiculos_grafica)
