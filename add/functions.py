@@ -5,6 +5,8 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+from statistics import multimode
+from add.texto import prRed, prGreen, prYellow, prLightPurple, prPurple, prCyan, prLightGray, prBlack
 
 def clearConsole():
     command = 'clear'
@@ -80,10 +82,49 @@ def preparando_grafica(data,vehiculos_seleccionados):
     for vehiculo in vehiculos_seleccionados:
         # se filtra la información por tipo de vehículo
         data_filter = data.loc[data['CLASE_DE_VEHICULO'].isin([vehiculo])]
-        # se guarda, se agrupa y se cuenta las veces del accidente con la misma fecha 
+        # se guarda, se agrupa y se cuenta las veces del accidente con la misma fecha (formto Series)
         datos_a_graficar[vehiculo] = pd.DataFrame(data_filter.groupby(["FECHA"])["CLASE_DE_VEHICULO"].agg('count'))
         
     return datos_a_graficar
+
+def datosEstadisticos(data,vehiculos_seleccionados):
+    
+    cols = data.columns
+    # print(data, vehiculos_seleccionados)
+    data_filter = {}
+    # iterando vehículos seleccionados
+    for vehiculo in vehiculos_seleccionados:
+        # se filtra la información por tipo de vehículo
+        data_filter[vehiculo] = data.loc[data['CLASE_DE_VEHICULO'].isin([vehiculo])]
+    
+    
+    print(cols)
+    for item in data_filter:
+        print("Vehículo: ",item)
+        print("Lista de gravedad en accidentes: ",sorted(pd.unique(data_filter[item].GRAVEDAD)))
+        print("La gravedad más frecuente: ")
+        prRed(multimode(data_filter[item].GRAVEDAD))
+        print("Lista de días de la semana en accidentes: ",sorted(pd.unique(data_filter[item].DIA_SEMANA)))
+        print("El día de la semana más frecuente : ")
+        prGreen(multimode(data_filter[item].DIA_SEMANA))
+        print("Lista de la condición de la víctima: ",sorted(pd.unique(data_filter[item].CONDICION_DE_LA_VICTIMA)))
+        print("La condición de la víctma más frecuente: ")
+        prRed(multimode(data_filter[item].CONDICION_DE_LA_VICTIMA))
+        print("Lista de la jornada del accidentes: ",sorted(pd.unique(data_filter[item].JORNADA)))
+        print("La jornada más frecuente: ")
+        prGreen(multimode(data_filter[item].JORNADA))
+        print("Lista de las marcas del vehículo en accidentes: ",sorted(pd.unique(data_filter[item].MARCA)))
+        print("La marca de vehículo más frecuente: ")
+        prRed(multimode(data_filter[item].MARCA))
+        print("cifras de lesionados en accidentes por día: ",sorted(pd.unique(data_filter[item].LESIONADO)))
+        print("Cantidad de lesionados más frecuentes: ")
+        prGreen(multimode(data_filter[item].LESIONADO))
+        print("Cifras de homicidios en accidentes por día: ",sorted(pd.unique(data_filter[item].HOMICIDIOS)))
+        print("Cantidad de homicidios más frecuentes: ")
+        prRed(multimode(data_filter[item].HOMICIDIOS))
+        print("* - "*10)
+        print("\n")
+        
 
 def creandoSubGraficas(datos_vehiculos_seleccionados):
     num = len(datos_vehiculos_seleccionados)
@@ -96,7 +137,7 @@ def creandoSubGraficas(datos_vehiculos_seleccionados):
         df_grafica = dt_grafica.CLASE_DE_VEHICULO.to_frame().reset_index()
         dfg = df_grafica.rename(columns = {"CLASE_DE_VEHICULO":"ACCIDENTES"})
                                                 
-        ax[i].plot(dfg["FECHA"], dfg["ACCIDENTES"],color='purple')
+        ax[i].plot(dfg["FECHA"], dfg["ACCIDENTES"],"-r",markersize=2)
         ax[i].set_xlabel("Tiempo - Año 2023", fontsize=10)
         ax[i].set_ylabel(vehiculos, fontsize=10)
         ax[i].xaxis.set_major_formatter(mdates.DateFormatter('%m/%d'))
@@ -166,7 +207,7 @@ def generarMapa(data,opciones):
         # Apila la información.
         dataframe = dataframe._append(data_filter)
     
-    print(data_vehiculos)
+    # print(data_vehiculos)
       
     some_map = folium.Map(location=(3.535513,-76.297656),tiles="cartodbpositron", zoom_start=10)
 

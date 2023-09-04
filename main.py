@@ -24,18 +24,27 @@ if __name__=="__main__":
     seleccionando_vehiculos = input("\nIngresar número o números separados por un espacio: ")
     # Separa los nombres de los vehiculos de acuerdo a la lista de números seleccionados
     vehiculos_seleccionados = fn.convert(lista_vehiculos,seleccionando_vehiculos)
-    # Crea gráfica general (todos los datos)
-    # df_diario = fn.graficarHistorico(df)
-    # fn.creandoGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
-    fn.creandoSubGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
     
-    # seleccion_vehiculos_grafica = fn.preparando_grafica(df,lista)
+    # # Crea gráfica general (todos los datos)
+    # df_diario = fn.graficarHistorico(df)
+    
+    # # Crea gráficas una sobre otra
+    # fn.creandoGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
+    
+    # # crea gráfica de series de tiempo en subplot.
+    # fn.creandoSubGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
+    
+    # # Imprime datos estadisticos
+    fn.datosEstadisticos(df,vehiculos_seleccionados)
+    
+    # # Sumatoria de accidentes agrupados por días
+    # seleccion_vehiculos_grafica = fn.preparando_grafica(df,vehiculos_seleccionados)
     # print(seleccion_vehiculos_grafica)
-    # # # Para generar el mapa solo descomenta las siguientes lineas de código
-    # # # ------------------------------------------
-    # # Generar mapa con las opciones ingresadas
-    # fn.generarMapa(df,lista)
+    
+    # # Para generar el mapa solo descomenta las siguientes lineas de código
+    # Generar mapa con las opciones ingresadas
+    fn.generarMapa(df,vehiculos_seleccionados)
 
-    # # Abre el archivo map.html  
-    # filename = 'file:///'+os.getcwd()+'/'+'map.html'
-    # webbrowser.open_new_tab(filename)
+    # Abre el archivo map.html  
+    filename = 'file:///'+os.getcwd()+'/'+'map.html'
+    webbrowser.open_new_tab(filename)
