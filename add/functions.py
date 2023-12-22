@@ -76,7 +76,7 @@ def preparando_grafica(data,vehiculos_seleccionados):
         
     }
     '''
-    # Duccionario vacio
+    # Diccionario vacio
     datos_a_graficar = {}
     # iterando vehículos seleccionados
     for vehiculo in vehiculos_seleccionados:

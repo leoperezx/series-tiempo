@@ -66,4 +66,4 @@ La anterior imgen es un ejemplo de como debe ser el resultado final.
 
 Al realizar la selección de vehículos se realiza la programación de un función para realizar una gráfica. Esta solo grafica los vehículos seleccionados. en adelante se busca realizar muchos tipos de gráficas relacionadas con estadística.
 
-> &copy; 2023 [| -------> leoperezx](https://linkr.bio/2op3pq)
+> &copy; 2023 | [leoperezx](https://linkr.bio/2op3pq)
