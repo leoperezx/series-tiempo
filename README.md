@@ -6,13 +6,13 @@ El siguiente es un proyecto que se desprende del respositorio "accidentes" el cu
 
 El motivo de este segundo repositorio es trabajar más en la parte de filtros, manipulación y la analítica de los datos, pero no tanto en la parte visual.
 
-Se plantea de forma inicial solo usar _Python_ para este proyecto. En el directorio _add_ se encuentra un archivo con _funciones_ y la base de datos inicial. Además se encuetra un archivo _texto_ que modifica los textos de respuesta en la terminal para hacerlos resaltar.
+Se plantea de forma inicial solo usar _Python_ para este proyecto. En el directorio _add_ se encuentra un archivo con _funciones.py_ y la base de datos inicial. Además se encuetra un archivo _texto.py_ que modifica los textos de respuesta en la terminal para hacerlos resaltar.
 
 ## Información de la base de datos
 
 Se realiza un trabajo previo para organizar la información de la base de datos. Inicialmente se _limpia_ la información contenida en **FECHA**, **AÑO**, **HORA** y **DIA_SEMANA** para mejorar, entender y manipular mejor la información y las respuestas. Se desarrollan algunas funciones para dibujar en un mapa cada uno de los puntos georeferenciados realizando algunos filtros. Se recuerda que la información aquí consignada es información de _datos abiertos_ de la _Alcaldía de Palmira_ de los accidentes registrados en el año 2020.
 
-A continuación, la lista disponible de atributos de la base de datoss:
+A continuación, se muestra la lista disponible de atributos de la base de datos:
     - GRAVEDAD
     - FECHA
     - AÑO
@@ -38,9 +38,11 @@ A continuación, la lista disponible de atributos de la base de datoss:
     - TIPO_DE_SERVICIO
     - EMPRESA
 
+La información contenida en _dataset.csv_ ya fue inicialmente limpidada. Sin embargo exiten alugunas impuresas que se corregirán a medida que se requiera pulir la información.
+
 ## Requirements
 
-En el archivo _requirements.txt_ se encuentran los paquetes de Python que he utilizado para este pequeño Script. 
+En el archivo _requirements.txt_ se encuentran los paquetes de Python que he utilizado para este pequeño Script.
 
 ## Patallazos
 
@@ -48,15 +50,15 @@ El dataframe aloja información de los accidentes en Palmira ocurridos en el añ
 
 ![lista de vehículos](/add/presentacion.PNG)
 
-Puedes escribir más de uno separados por un espacio. El algoritmo espera números del 1 al 16. Cada número se asocia a una solicitid de información. Se extrae toda la información y se junta toda en un dataframe mas pequeño. Además se le asocia un color diferente a cada vihículo dentro del dataframe.
+Puedes escribir más de un número de interes separado los números con un espacio (Ej. 2 3 10 13). El algoritmo espera números del 1 al 16. Cada número se asocia a una solicitid de información. Se extrae toda la información y se junta toda en un dataframe mas pequeño. Además se le asocia un color diferente a cada vihículo dentro del dataframe.
 
 ![lista de vehículos](/add/presentacion1.PNG)
 
-El algoritmo realiza una pequeña tabla de conveción.
+El algoritmo realiza una pequeña tabla de conveción presentada en la terminal.
 
 ![lista de vehículos](/add/presentacion2.PNG)
 
-Al final, presenta una serie de puntos en un mapa. Cada punto muestra una pequeña información adicional y particular de cada accidente. la velocidad con la que se genera el mapa depende de muchas cosas, entre ellas de la velocidad de tu computadora.
+Al final, el agoritmo abre un navegador y debe mostrar en un mapa una serie de puntos los accidentes asociados diferenciado por color. Cada punto muestra una pequeña información adicional y particular dando "click" sobre. la velocidad con la que se genera el mapa y la interacción depende de muchas cosas, entre ellas de la velocidad de tu computadora.
 
 ![lista de vehículos](/add/presentacion3.PNG)
 
