@@ -30,12 +30,15 @@ def listaVehiculos(df):
 def colores(vehiculos):
     # genera una lista de colores en formato hex [#xxyyzz]
     color_vehiculos = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)]) for i in range(len(vehiculos))]
+    
     return color_vehiculos
 
 def convert(vehiculos,seleccion_de_vehiculos):
     '''
-    Recibe los números ingresados por teclado, los asocia con la lista de 
-    tipo de vehiculos y entrega la lista vinculando los vehículos. 
+    Recibe los números ingresados por teclado y los asocia con la lista de 
+    tipo de vehiculos. Recibe los números ingresados por teclado y 
+    entrega la respectiva lista de vehículos asocidados a los números 
+    ingresados por el usuario. 
     '''
     # Divide con comas (,) los número ingresados por teclado
     li = list(seleccion_de_vehiculos.split(" ")) 
@@ -96,9 +99,10 @@ def datosEstadisticos(data,vehiculos_seleccionados):
     for vehiculo in vehiculos_seleccionados:
         # se filtra la información por tipo de vehículo
         data_filter[vehiculo] = data.loc[data['CLASE_DE_VEHICULO'].isin([vehiculo])]
+    print(data_filter.keys())
     
     
-    print(cols)
+    # print(cols)
     for item in data_filter:
         print("Vehículo: ",item)
         print("Lista de gravedad en accidentes: ",sorted(pd.unique(data_filter[item].GRAVEDAD)))
@@ -125,6 +129,11 @@ def datosEstadisticos(data,vehiculos_seleccionados):
         print("* - "*10)
         print("\n")
         
+        return data_filter
+
+def dict_to_df(data):
+        df_list = list(data.values())
+        return pd.concat(df_list,axis=0)
 
 def creandoSubGraficas(datos_vehiculos_seleccionados):
     num = len(datos_vehiculos_seleccionados)

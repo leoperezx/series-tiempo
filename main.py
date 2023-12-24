@@ -34,17 +34,22 @@ if __name__=="__main__":
     # # crea gráfica de series de tiempo en subplot.
     # fn.creandoSubGraficas(fn.preparando_grafica(df,vehiculos_seleccionados))
     
-    # # Imprime datos estadisticos
-    fn.datosEstadisticos(df,vehiculos_seleccionados)
+    tx.separacion()
+    # # Crea un diccionario de diccionarios con los datos donde cada uno de los vehículos es la "key"
+    df_filter_dict = fn.datosEstadisticos(df,vehiculos_seleccionados)
+    
+    # # Agrupa todos los datos en un solo dataframe
+    df_filter_pd = fn.dict_to_df(df_filter_dict)
+    # print(df_filter_pd.info())
     
     # # Sumatoria de accidentes agrupados por días
     # seleccion_vehiculos_grafica = fn.preparando_grafica(df,vehiculos_seleccionados)
     # print(seleccion_vehiculos_grafica)
     
-    # # Para generar el mapa solo descomenta las siguientes lineas de código
-    # Generar mapa con las opciones ingresadas
-    fn.generarMapa(df,vehiculos_seleccionados)
+    # # # Para generar el mapa solo descomenta las siguientes lineas de código
+    # # Generar mapa con las opciones ingresadas
+    # fn.generarMapa(df,vehiculos_seleccionados)
 
-    # Abre el archivo map.html  
-    filename = 'file:///'+os.getcwd()+'/'+'map.html'
-    webbrowser.open_new_tab(filename)
+    # # Abre el archivo map.html  
+    # filename = 'file:///'+os.getcwd()+'/'+'map.html'
+    # webbrowser.open_new_tab(filename)
