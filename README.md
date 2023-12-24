@@ -6,11 +6,11 @@ El siguiente es un proyecto que se desprende del respositorio "accidentes" el cu
 
 El motivo de este segundo repositorio es trabajar más en la parte de filtros, manipulación y la analítica de los datos, pero no tanto en la parte visual.
 
-Se plantea de forma inicial solo usar _Python_ para este proyecto. En el directorio _add_ se encuentra un archivo con _funciones_ y la base de datos inicial. Además se encuetra un archivo _texto_ que modifica los textos de respuesta en la terminal para hacerlos resaltar. 
+Se plantea de forma inicial solo usar _Python_ para este proyecto. En el directorio _add_ se encuentra un archivo con _funciones_ y la base de datos inicial. Además se encuetra un archivo _texto_ que modifica los textos de respuesta en la terminal para hacerlos resaltar.
 
 ## Información de la base de datos
 
-Se realiza un trabajo previo para organizar la información de la base de datos. Inicialmente se _limpia_ la información contenida en *FECHA*, *AÑO*, *HORA* y *DIA_SEMANA* para mejorar, entender y manipular mejor la información y las respuestas. Se desarrollan algunas funciones para dibujar en un mapa cada uno de los puntos georeferenciados realizando algunos filtros. Se recuerda que la información aquí consignada es información de _datos abiertos_ de la _Alcaldía de Palmira_ de los accidentes registrados en el año 2020.
+Se realiza un trabajo previo para organizar la información de la base de datos. Inicialmente se _limpia_ la información contenida en **FECHA**, **AÑO**, **HORA** y **DIA_SEMANA** para mejorar, entender y manipular mejor la información y las respuestas. Se desarrollan algunas funciones para dibujar en un mapa cada uno de los puntos georeferenciados realizando algunos filtros. Se recuerda que la información aquí consignada es información de _datos abiertos_ de la _Alcaldía de Palmira_ de los accidentes registrados en el año 2020.
 
 A continuación, la lista disponible de atributos de la base de datoss:
     - GRAVEDAD
